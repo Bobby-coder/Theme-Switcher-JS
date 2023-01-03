@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --red: #e21717;
+  --primary: #0d0d0d;
+  --secondary:#fff;
+}
+
+.dark{
+  --primary: #fff;
+  --secondary:#0d0d0d;
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--primary);
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.list {
+  display: flex;
+  gap: 6rem;
+}
+
+.list-item {
+  color: var(--primary);
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.theme-btns button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dark-btn, .light-btn{
+  transform: scale(1.7);
+}
+
+.light-btn{
+  display: none;
+  color: #fff;
+}
+
+.hero-img {
+  width: 50rem;
+}
+
+.hero-img  img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.hero-right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-right-section  p {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.hero-right-section  p:first-child {
+  font-weight: 700;
+  color: var(--red);
+}
+
+.hero-right-section  h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.1rem;
+}
+
+.hero-right-section  .about-btn {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background-color: var(--red);
+}
+
+@media only screen and (max-width: 900px) {
+  br {
+    display: none;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-img {
+    width: 30rem;
+    margin-top: 0px;
+  }
+
+  .hero-right-section {
+    align-items: center;
+  }
+
+  .hero-right-section  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .hero-right-section  p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .hero-right-section  .about-btn {
+    font-size: 1.6rem;
+    align-self: auto;
+  }
+}
